@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         //Save the searchHistory array to local storage
         localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
 
+        //Call the function to display the search results
+        displaySearchResults(searchHistory);
+
         //Construct the API URL using the cityValue
         const apiKey = "b9021926c89843416e54f049e9cb56a9"
         const cityApiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityValue}&limit=1&appid=${apiKey}`;
@@ -47,5 +50,22 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
             });
     });
+
+    function displaySearchResults(searchHistory) {
+        const searchResultsContainer = document.getElementById('searchResults');
+        searchResultsContainer.innerHTML = ''; // Clear previous search results
+        
+        // Iterate over each city in the search history array
+        searchHistory.forEach(function(city) {
+            // Create a list item for each city and append it to the search results container
+            const listItem = document.createElement('li');
+            listItem.className = 'collection-item';
+            listItem.textContent = city;
+            searchResultsContainer.appendChild(listItem);
+        });
+    }
+
+    // Call the function to display the search results when the page loads
+    displaySearchResults(JSON.parse(localStorage.getItem('searchHistory')));
 });
 
