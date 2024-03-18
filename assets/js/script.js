@@ -12,6 +12,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const cityValue = document.getElementById('cityInput').value;
         console.log('City:', cityValue);
 
+        //Looks for the searchHistory in local storage and if it doesn't exist, sets it to an empty array
+        const searchHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+
+        //add the cityValue to the searchHistory array
+        searchHistory.push(cityValue);
+
+        //Save the searchHistory array to local storage
+        localStorage.setItem('searchHistory', JSON.stringify(searchHistory));
+
         //Construct the API URL using the cityValue
         const apiKey = "b9021926c89843416e54f049e9cb56a9"
         const cityApiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityValue}&limit=1&appid=${apiKey}`;
