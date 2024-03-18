@@ -266,14 +266,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const searchResultsContainer = document.getElementById('searchResults');
         searchResultsContainer.innerHTML = ''; // Clear previous search results
         
-        // Iterate over each city in the search history array
-        searchHistory.forEach(function(city) {
-            // Create a list item for each city and append it to the search results container
-            const listItem = document.createElement('li');
-            listItem.className = 'collection-item';
-            listItem.textContent = city;
-            searchResultsContainer.appendChild(listItem);
-        });
+        // Check if searchHistory is not null before using it
+        if (searchHistory) {
+            // Iterate over each city in the search history array
+            searchHistory.forEach(function(city) {
+                // Create a list item for each city and append it to the search results container
+                const listItem = document.createElement('li');
+                listItem.className = 'collection-item';
+                listItem.textContent = city;
+                searchResultsContainer.appendChild(listItem);
+            });
+        }
     }
 
     // Call the function to display the search results when the page loads
