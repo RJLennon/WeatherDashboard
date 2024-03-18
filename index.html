@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <title>Weather Dashboard</title>
+</head>
+
+<body class="blue">
+  <div class="row weatherTitle white-text">
+    <h1>Weather Dashboard</h1>
+  </div>
+  <div class="row blue lighten-5">
+    <div class = "col s4">
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="text" id="cityInput">
+                <label>Enter City Here</label>
+            </div>
+            <a class="waves-effect waves-light btn col offset-s4">Search</a>
+        </div>
+        <div class="row"> 
+        <ul class="collection" id="breweryResults">
+            <li class="collection-item avatar hoverable">
+              <i class="material-icons circle">room</i>
+              <span class="title">Title</span>
+              <p>First Line <br>
+                Second Line
+              </p>
+              <a href="#!" class="secondary-content"><i class="material-icons">favorite_border</i></a>
+            </li>
+        </ul>
+        </div>   
+    </div>
+    <div class="card col s7" style="min-height: 100vh;">
+        <h3 id="breweryTitle">This is the title</h3>
+        <div id="breweryContent">This is the content</div>
+        <div>
+            <h3 style="padding: 5px">5 day forecast</h3>
+            <div class="d-flex flex-row">
+                <div id="dayInfo" style="padding: 5px;">
+                  <div id="timer1"></div>
+                  <div id="temp1">Temp:</div>
+                  <div id="wind1">Wind:</div>
+                  <div id="humid1">Humidity:</div>
+                </div>
+                <div id="dayInfo" style="padding: 5px;">
+                  <div id="timer2"></div>
+                  <div id="temp2">Temp:</div>
+                  <div id="wind2">Wind:</div>
+                  <div id="humid2">Humidity:</div>
+                </div>
+                <div id="dayInfo" style="padding: 5px;">
+                  <div id="timer3"></div>
+                  <div id="temp3">Temp:</div>
+                  <div id="wind3">Wind:</div>
+                  <div id="humid3">Humidity:</div>
+                </div>
+                <div id="dayInfo" style="padding: 5px;">
+                  <div id="timer4"></div>
+                  <div id="temp4">Temp:</div>
+                  <div id="wind4">Wind:</div>
+                  <div id="humid4">Humidity:</div>
+                </div>
+                <div id="dayInfo" style="padding: 5px;">
+                  <div id="timer5"></div>
+                  <div id="temp5">Temp:</div>
+                  <div id="wind5">Wind:</div>
+                  <div id="humid5">Humidity:</div>
+                </div>
+            </div>
+        </div>
+    </div>   
+  </div>
+
+
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!--Materialize-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script type="text/javascript" src="./assets/js/script.js"></script>
+
+  <script type="text/javascript" src="./assets/js/results.js"></script>
+</body>
+
+</html>
