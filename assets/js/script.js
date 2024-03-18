@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         const icon5 = (data.list[39].weather[0].icon);
                         
                         // returns the icon URL
-                        const currentIconURL = `http://openweathermap.org/img/wn/${currentIcon}.png`;
+                        const currentIconURL = `https://openweathermap.org/img/wn/${currentIcon}.png`;
                         const icon1URL = `https://openweathermap.org/img/wn/${icon1}.png`;
                         const icon2URL = `https://openweathermap.org/img/wn/${icon2}.png`;
                         const icon3URL = `https://openweathermap.org/img/wn/${icon3}.png`;
