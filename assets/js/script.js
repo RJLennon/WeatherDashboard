@@ -1,7 +1,4 @@
 
-//https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
-
-//http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         //Construct the API URL using the cityValue
         const apiKey = "b9021926c89843416e54f049e9cb56a9"
-        const cityApiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityValue}&limit=1&appid=${apiKey}`;
+        const cityApiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityValue}&limit=1&appid=${apiKey}`;
 
         //Fetch the data from the API
         fetch(cityApiURL)
@@ -90,12 +87,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         const icon5 = (data.list[39].weather[0].icon);
                         
                         // returns the icon URL
-                        const currentIconURL = `http://openweathermap.org/img/wn/${currentIcon}.png`;
-                        const icon1URL = `http://openweathermap.org/img/wn/${icon1}.png`;
-                        const icon2URL = `http://openweathermap.org/img/wn/${icon2}.png`;
-                        const icon3URL = `http://openweathermap.org/img/wn/${icon3}.png`;
-                        const icon4URL = `http://openweathermap.org/img/wn/${icon4}.png`;
-                        const icon5URL = `http://openweathermap.org/img/wn/${icon5}.png`;
+                        const currentIconURL = `https://openweathermap.org/img/wn/${currentIcon}.png`;
+                        const icon1URL = `https://openweathermap.org/img/wn/${icon1}.png`;
+                        const icon2URL = `https://openweathermap.org/img/wn/${icon2}.png`;
+                        const icon3URL = `https://openweathermap.org/img/wn/${icon3}.png`;
+                        const icon4URL = `https://openweathermap.org/img/wn/${icon4}.png`;
+                        const icon5URL = `https://openweathermap.org/img/wn/${icon5}.png`;
 
                         //render weather data to the page
                         document.getElementById('currentDate').innerText = cityValue + " (" + currentDate + ")";
@@ -151,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     //Construct the API URL using the cityValue
         const apiKey = "b9021926c89843416e54f049e9cb56a9"
-        const cityApiURL = `http://api.openweathermap.org/geo/1.0/direct?q=${listItemText}&limit=1&appid=${apiKey}`;
+        const cityApiURL = `https://api.openweathermap.org/geo/1.0/direct?q=${listItemText}&limit=1&appid=${apiKey}`;
 
         //Fetch the data from the API
         fetch(cityApiURL)
@@ -215,11 +212,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         
                         // returns the icon URL
                         const currentIconURL = `http://openweathermap.org/img/wn/${currentIcon}.png`;
-                        const icon1URL = `http://openweathermap.org/img/wn/${icon1}.png`;
-                        const icon2URL = `http://openweathermap.org/img/wn/${icon2}.png`;
-                        const icon3URL = `http://openweathermap.org/img/wn/${icon3}.png`;
-                        const icon4URL = `http://openweathermap.org/img/wn/${icon4}.png`;
-                        const icon5URL = `http://openweathermap.org/img/wn/${icon5}.png`;
+                        const icon1URL = `https://openweathermap.org/img/wn/${icon1}.png`;
+                        const icon2URL = `https://openweathermap.org/img/wn/${icon2}.png`;
+                        const icon3URL = `https://openweathermap.org/img/wn/${icon3}.png`;
+                        const icon4URL = `https://openweathermap.org/img/wn/${icon4}.png`;
+                        const icon5URL = `https://openweathermap.org/img/wn/${icon5}.png`;
 
                         //render weather data to the page
                         document.getElementById('currentDate').innerText = listItemText + " (" + currentDate + ")";
